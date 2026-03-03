@@ -1,0 +1,107 @@
+#######
+#
+# Academic Portfolio Template
+# a basic personal or professional portfolio template for Jekyll with GitHub Pages
+# https://github.com/isu-digital/portfolio-template
+#
+#######
+
+#######
+# SITE SETTINGS
+#
+title: Academic Portfolio Template
+description: "a basic personal or professional portfolio template for Jekyll with GitHub Pages"
+year: 2026
+author: ISU Cyclone
+bio:
+
+# PERSONAL URLS
+image: /assets/img/emoji-cool.png
+email:
+github_profile:
+department:
+orcid:
+cv:
+
+# PAGE METADATA SETTINGS [optional!]
+# organization-name: 
+# add representative image for social media sharing
+# use a relative link to image file in project or full url
+# featured-image:
+# featured-image-alt:
+
+##########
+# URL VARIABLES [optional!]
+#
+# Optional if using GitHub Pages! If building manually, these must be set correctly.
+#
+# use url for the domain, e.g. https://thecdil.github.io
+# on gh-pages follow the pattern: https://username.github.io
+url:
+# use baseurl to add subsection of the domain, e.g. /timelinejs-template
+# on gh-pages this is a / followed by the name of the repository
+# baseurl is your github repository's name prefixed with a /
+baseurl:
+# location of code, the full url to your github repository
+source-code: https://github.com/isu-digital/portfolio-template
+
+##########
+# ROBOTS EXCLUDE [optional!]
+#
+# set noindex to true if you do NOT want Google to index your site
+# noindex: true 
+
+##########
+# STYLE OPTIONS
+#
+# NAVBAR COLORS [optional!]
+# navbar text color
+# Choose from "navbar-light" for use with light background colors, or "navbar-dark" for dark background colors
+navbar-color: navbar-light
+# navbar background color
+# Choose from bg-primary, bg-secondary, bg-success, bg-danger, bg-warning, bg-info, bg-light, bg-dark, bg-white
+navbar-background: bg-light
+
+# BOOTSWATCH THEMES [optional!]
+# You can replace the standard Bootstrap theme with a Bootswatch (https://github.com/thomaspark/bootswatch) option
+# Choose from: cerulean; cosmo; cyborg; darkly; flatly; journal; litera; lumen; lux; materia; minty; pulse; sandstone; simplex; sketchy; slate; solar; spacelab; superhero; united; yeti 
+bootswatch: 
+
+# THEME FONTS [optional!]
+base-font-size: 1.2em
+text-color: "#191919"
+link-color: "#0d6efd"
+base-font-family: # comment out for bootstrap defaults. e.g. Roboto
+font-cdn: # add font stylesheet, e.g. <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+
+# ICONS [optional!]
+# Generates icons for sidebar information from https://fontawesome.com/
+fontawesome: true
+
+#######
+# BUILD SETTINGS [usually leave as is]
+#
+# Defaults to simplify front matter,
+# all files in the "pages" folder will be output at root of site
+defaults:
+# pages directory
+- scope:
+    path: "pages"
+  values:
+    layout: profile-page-left
+    permalink: /:basename:output_ext
+# index.md
+- scope:
+    path: ""
+    type: pages
+  values:
+    layout: profile-page-left
+
+##########
+# BLOG SETTINGS
+#
+# BLOG EXCERPTS
+show_excerpts: true
+
+# ignore stuff
+exclude: [docs/, Rakefile, README.md, LICENSE]

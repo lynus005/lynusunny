@@ -1,0 +1,22 @@
+{% comment %}
+    Add a reel of the most recent blog posts, showing the title, excerpt, and image for each post.
+{% endcomment %}
+
+<div class="container">
+    <div class="row">
+        {% assign sorted_posts = site.posts | sort: 'date' | reverse %}
+        {% assign recent_posts = sorted_posts | slice: 0, 3 %}
+        {% for post in recent_posts %}
+            <div class="col-md-4 d-flex mb-4">
+                {% include card.html 
+                    text=post.excerpt 
+                    header=post.title 
+                    img=post.image 
+                    alt=post.alt 
+                    width="100" 
+                    url=post.url 
+                 %}
+            </div>
+        {% endfor %}
+    </div>
+</div>

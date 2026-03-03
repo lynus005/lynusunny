@@ -1,0 +1,23 @@
+---
+layout: default
+---
+<div class="container py-4">
+    <div class="row">
+        <div class="col-md-9">
+            {% if page.title %}<h1 class="mb-5">{{ page.title }}</h1>{% endif %}
+            {{ content }}
+        </div>
+        <div class="col-md-3">
+            <div class="text-start">
+            {% if site.image %}<img src="{{ site.image | relative_url }}" alt="researcher image" class="rounded text-center w-75">{% endif %}
+            <h4 class="mt-4">{{ site.author }}</h4>
+            <p class="text-muted mt-2 mb-4">{{ site.bio }}</p>
+            {% if site.email %}<p class="text-muted text-small my-2"><span class="fas fa-envelope-square"></span> <a href="{{ site.email | prepend: 'mailto:' }}" target="_blank" rel="noopener">Email</a></p>{% endif %}
+            {% if site.department %}<p class="text-muted text-small my-2"><span class="fas fa-school"></span> <a href="{{ site.department }}" target="_blank" rel="noopener">Department</a></p>{% endif %}
+            {% if site.orcid %}<p class="text-muted text-small my-2"><span class="fas fa-id-card"></span> <a href="{{ site.orcid }}" target="_blank" rel="noopener">ORCiD</a></p>{% endif %}
+            {% if site.github_profile %}<p class="text-muted text-small my-2"><span class="fab fa-github"></span> <a href="{{ site.github_profile }}" target="_blank" rel="noopener">GitHub</a></p>{% endif %}
+            {% if site.cv %}<p class="text-muted text-small my-2"><span class="fa-regular fa-file"></span> <a href="{{ site.cv | relative_url }}" target="_blank" rel="noopener">CV</a></p>{% endif %}
+            </div>
+        </div>
+    </div>
+</div>

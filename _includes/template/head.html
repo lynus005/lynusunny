@@ -1,0 +1,23 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+{% if site.font-cdn %}{{ site.font-cdn }}{%- endif -%}
+<link rel="stylesheet" href="{% if site.bootswatch %}https://cdn.jsdelivr.net/npm/bootswatch@5.1.3/dist/{{ site.bootswatch }}/bootstrap.min.css{% else %}{{ '/assets/lib/bootstrap.min.css' | relative_url }}{% endif %}" type="text/css">
+<title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+{% if site.description %}<meta name="description" content="{{ site.description }}">{% endif %}
+{% if site.author %}<meta name="author" content="{{ site.author }}">{% endif %}
+<!-- built with bootstrap5-template https://github.com/thecdil/bootstrap5-template -->
+<meta name="generator" content="thecdil/bootstrap5-template">
+<link rel="shortcut icon" type="image/x-icon" href="{{ '/favicon.ico' | relative_url }}">
+
+{%- if site.fontawesome == true -%}<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" crossorigin="anonymous">{%- endif -%}
+
+{% if page.head %}{% include {{ page.head }} %}{% endif %}
+{% if layout.head %}{% include {{ layout.head }} %}{% endif %}
+<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" type="text/css">
+
+{% include template/page-meta.html %}
+
+{% if jekyll.environment == "production" %}{% include template/analytics.html %}{%- endif -%}
+
+{% if site.noindex == true or page.noindex == true %}<meta name="robots" content="noindex">{% endif %}
+<!-- Last build date: {{ site.time | date: "%Y-%m-%d" }} -->
