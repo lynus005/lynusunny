@@ -9,18 +9,18 @@
 #######
 # SITE SETTINGS
 #
-title: Academic Portfolio Template
+title: "Linus's Personal website"
 description: "a basic personal or professional portfolio template for Jekyll with GitHub Pages"
 year: 2026
-author: ISU Cyclone
-bio:
+author: Sunday Linus
+bio:PhD| Graduate Research Assistant 
 
 # PERSONAL URLS
 image: /assets/img/emoji-cool.png
-email:
+email:lynusdgreat005@gmail.com
 github_profile:
-department:
-orcid:
+department:Mechanical Engineering
+orcid:: https://orcid.org/0009-0008-6094-443X
 cv:
 
 # PAGE METADATA SETTINGS [optional!]
